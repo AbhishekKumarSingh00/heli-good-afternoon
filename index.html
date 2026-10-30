@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6d5aa">
+  <meta name="description" content="Good AfterNoon Heli">
+  <title>Good AfterNoon Heli</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg class="scenery" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#f6cfb2"/><stop offset=".58" stop-color="#fff0cb"/><stop offset="1" stop-color="#e4edcc"/></linearGradient>
+      <radialGradient id="sun-glow"><stop stop-color="#fff9d8" stop-opacity=".95"/><stop offset="1" stop-color="#ffe3a3" stop-opacity="0"/></radialGradient>
+      <linearGradient id="meadow" x2="0" y2="1"><stop stop-color="#a8bb86"/><stop offset="1" stop-color="#6f926d"/></linearGradient>
+      <g id="flower"><path d="M0 0v22m0-7q-9-10-12-5 3 8 12 5" fill="#6a8b61" stroke="#68875a" stroke-width="2"/><g fill="#fff3da"><ellipse cy="-6" rx="4" ry="7"/><ellipse cy="6" rx="4" ry="7"/><ellipse cx="-6" rx="7" ry="4"/><ellipse cx="6" rx="7" ry="4"/></g><circle r="4" fill="#e1ae55"/></g>
+      <g id="tree"><path d="M0 0v-150m0 79-32-37m32 3 33-38" stroke="#8e8863" stroke-width="12" stroke-linecap="round"/><g fill="#93a87e"><circle cy="-166" r="52"/><circle cx="-40" cy="-126" r="48"/><circle cx="37" cy="-135" r="52"/><circle cy="-103" r="50"/></g><g fill="#afbc8b" opacity=".8"><circle cx="-17" cy="-178" r="29"/><circle cx="-48" cy="-140" r="27"/></g></g>
+    </defs>
+    <path d="M0 0h1600v1000H0z" fill="url(#sky)"/>
+    <circle cx="1210" cy="210" r="245" fill="url(#sun-glow)"/>
+    <circle class="landscape-sun" cx="1210" cy="210" r="66" fill="#fff1ba"/>
+    <g class="cloud cloud-one" fill="#fff8e9" opacity=".65"><ellipse cx="290" cy="194" rx="130" ry="23"/><ellipse cx="257" cy="176" rx="58" ry="33"/><ellipse cx="326" cy="179" rx="65" ry="34"/></g>
+    <g class="cloud cloud-two" fill="#fff9ea" opacity=".6"><ellipse cx="1010" cy="351" rx="130" ry="19"/><ellipse cx="978" cy="339" rx="49" ry="27"/><ellipse cx="1035" cy="334" rx="55" ry="31"/></g>
+    <path d="M0 565 180 354 346 523 532 321 759 546 985 393 1251 563 1457 350 1600 486v514H0z" fill="#c6c6ab" opacity=".62"/>
+    <path d="M0 650Q235 408 507 614T1021 604t579-16v412H0z" fill="#b9c5a0"/>
+    <path d="M0 708Q270 529 596 683t626-37 378 9v345H0z" fill="#a2b78a"/>
+    <path d="M0 817Q300 639 782 788t818-62v274H0z" fill="url(#meadow)"/>
+    <path d="M810 718q-280 111-60 282h334Q785 838 853 718" fill="#e3cda9" opacity=".8"/>
+    <g class="birds" fill="none" stroke="#a18b77" stroke-width="3" stroke-linecap="round"><path d="M400 275q10-12 20 0 10-12 20 0m55 41q8-10 16 0 8-10 16 0m-163 7q6-8 12 0 6-8 12 0"/></g>
+    <use href="#tree" x="195" y="790" transform="rotate(-5 195 790)"/>
+    <use href="#tree" x="1390" y="773" transform="translate(-140 -82) scale(1.12)"/>
+    <use href="#tree" x="98" y="938" opacity=".6"/>
+    <g class="foreground-flowers"><use href="#flower" x="187" y="889"/><use href="#flower" x="242" y="941"/><use href="#flower" x="337" y="864"/><use href="#flower" x="421" y="965"/><use href="#flower" x="1177" y="920"/><use href="#flower" x="1257" y="868"/><use href="#flower" x="1367" y="941"/><use href="#flower" x="1083" y="975"/></g>
+  </svg>
+  <main class="afternoon">
+      <div class="story-delivery" data-step="idle">
+        <svg class="delivery-scene" viewBox="0 0 460 340" role="img" aria-labelledby="scene-title scene-description">
+          <title id="scene-title">A sunshine delivery for Heli</title>
+          <desc id="scene-description">A little truck brings a gift to Heli's front door. Heli comes outside, picks up the parcel, and opens her afternoon surprise.</desc>
+          <defs>
+            <linearGradient id="house-wall" x2="1" y2="1"><stop stop-color="#f6dbc0"/><stop offset="1" stop-color="#ebc5a5"/></linearGradient>
+          </defs>
+          <ellipse cx="230" cy="302" rx="220" ry="17" fill="#b1b788" opacity=".6"/>
+          <path d="M10 305h440" stroke="#dbc6a2" stroke-width="13" stroke-linecap="round"/>
+          <path d="M315 292h86" stroke="#bba086" stroke-width="7" stroke-linecap="round"/>
+          <rect x="302" y="116" width="126" height="173" rx="4" fill="url(#house-wall)"/>
+          <path d="m287 122 78-64 78 64" fill="#bf7e68" stroke="#ac6e59" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M402 83V61h13v34" fill="#c58d73"/>
+          <rect x="315" y="144" width="39" height="42" rx="3" fill="#fdf1d9" stroke="#d4ae8d" stroke-width="4"/>
+          <path d="M335 145v39m-18-20h35" stroke="#d4ae8d" stroke-width="3"/>
+          <rect x="365" y="185" width="43" height="103" rx="20" fill="#896953"/>
+          <g class="scene-door"><path d="M365 288v-82a21 21 0 0 1 43 0v82" fill="#b5bd91" stroke="#96a279" stroke-width="3"/><circle cx="397" cy="244" r="3" fill="#f8dfa2"/></g>
+          <g class="scene-plant"><path d="M416 287v-25m0 10q-20-18-14-23 17 2 14 23m1 1q-2-26 11-27 8 9-11 27" fill="#9ca979" stroke="#8c9d6c" stroke-width="2"/><path d="m405 279 4 17h15l4-17" fill="#c88a6e"/></g>
+          <g class="scene-truck">
+            <ellipse cx="113" cy="296" rx="99" ry="7" fill="#a48b6a" opacity=".13"/>
+            <rect x="15" y="201" width="119" height="76" rx="9" fill="#cf8b72"/>
+            <rect x="23" y="210" width="102" height="55" rx="5" fill="#dc9d82"/>
+            <circle cx="74" cy="237" r="14" fill="#fff0be"/><path d="M74 216v-6m0 54v-6m-21-21h-6m54 0h-6m-36-15-4-4m38 38-4-4m0-30 4-4m-38 38 4-4" stroke="#fff0be" stroke-width="3" stroke-linecap="round"/>
+            <path d="M134 222h35l24 30v28h-59z" fill="#e1af77"/>
+            <path d="M143 229h22l15 21h-37z" fill="#eef1de"/>
+            <path d="M151 230v19" stroke="#d2a06c" stroke-width="3"/>
+            <path d="M17 278h179" stroke="#ac735b" stroke-width="8" stroke-linecap="round"/>
+            <rect x="181" y="261" width="13" height="8" rx="3" fill="#fff1ba"/>
+            <g class="truck-wheel"><circle cx="48" cy="282" r="16" fill="#685e51"/><circle cx="48" cy="282" r="8" fill="#e9cfaa"/><path d="M48 276v12m-6-6h12" stroke="#a48c71" stroke-width="2"/></g>
+            <g class="truck-wheel"><circle cx="164" cy="282" r="16" fill="#685e51"/><circle cx="164" cy="282" r="8" fill="#e9cfaa"/><path d="M164 276v12m-6-6h12" stroke="#a48c71" stroke-width="2"/></g>
+            <path class="truck-puff" d="M4 274h-18m17 10h-25" stroke="#d4bd9b" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <g class="scene-person">
+            <ellipse cx="381" cy="287" rx="18" ry="4" fill="#9d8566" opacity=".14"/>
+            <path d="M370 268v17m20-17v17" stroke="#c18d73" stroke-width="6" stroke-linecap="round"/>
+            <path d="M367 286h9m10 0h9" stroke="#876d59" stroke-width="5" stroke-linecap="round"/>
+            <path d="M365 237q15-13 30 0l7 34h-44z" fill="#ce8f8c"/>
+            <path class="heli-arm" d="m366 240-12 18m40-18 10 17" fill="none" stroke="#e5b391" stroke-width="7" stroke-linecap="round"/>
+            <path d="M363 220q-5-29 17-29t19 32l-7 11h-25z" fill="#6c5142"/>
+            <ellipse cx="381" cy="215" rx="14" ry="18" fill="#edbe9c"/>
+            <path d="M365 211q4-27 29-8l5 8q-17-1-24-9-1 8-10 9" fill="#6c5142"/>
+            <path d="M374 216h1m11 0h1" stroke="#6c5142" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M377 224q4 4 8 0" stroke="#ba7b68" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <circle cx="393" cy="199" r="5" fill="#e2b355"/>
+          </g>
+          <g class="scene-parcel">
+            <rect x="298" y="260" width="34" height="30" rx="2" fill="#d5a270"/>
+            <path d="M313 261v28" stroke="#f7e1b4" stroke-width="6"/>
+            <rect x="302" y="271" width="10" height="9" rx="1" fill="#fff6e2"/>
+            <g class="scene-parcel-lid"><rect x="295" y="256" width="40" height="7" rx="2" fill="#e3b887"/><path d="M314 256q-15-16-16-6 0 7 16 6m0 0q15-16 16-6 0 7-16 6" fill="none" stroke="#c77361" stroke-width="3"/></g>
+          </g>
+          <g class="parcel-magic" fill="#e5ad4f"><path d="m287 218 3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><path d="m331 210 2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/><circle cx="311" cy="208" r="3"/><circle cx="337" cy="240" r="3"/></g>
+        </svg>
+      </div>
+      <h1 class="greeting" id="greeting" aria-live="polite" hidden>Good AfterNoon <span>Heli</span></h1>
+  </main>
+  <div id="confetti" aria-hidden="true"></div>
+</body>
+</html>
