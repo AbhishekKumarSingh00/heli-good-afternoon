@@ -1,0 +1,45 @@
+:root{color-scheme:light}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{background:#f6d5aa;color:#79553f;font-family:Georgia,"Times New Roman",serif}
+.scenery{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
+.afternoon{position:relative;width:100%;height:100svh;min-height:280px;isolation:isolate}
+.story-delivery{position:absolute;bottom:5vh;left:50%;width:min(1000px,98vw);transform:translateX(-50%)}
+.delivery-scene{display:block;width:100%;max-height:73svh;overflow:hidden;filter:drop-shadow(0 14px 15px #506f3e13)}
+.cloud-one{animation:drift 32s ease-in-out infinite alternate}
+.cloud-two{animation:drift 40s -12s ease-in-out infinite alternate-reverse}
+.birds{animation:soar 12s ease-in-out infinite alternate}
+.foreground-flowers{transform-origin:center bottom;animation:sway 6s ease-in-out infinite alternate}
+.scene-truck{transform:translateX(-230px);transition:transform 2.2s cubic-bezier(.3,0,.2,1)}
+[data-step="idle"] .scene-truck{transition:none}
+.scene-person{opacity:0;transform:translateX(0);transition:transform 1.4s ease-in-out,opacity .45s}
+.scene-door{transform-box:fill-box;transform-origin:left center;transition:transform .65s}
+.scene-parcel{opacity:0;transition:opacity .4s,transform 1.2s ease-in-out}
+.scene-parcel-lid{transform-box:fill-box;transform-origin:left bottom;transition:transform .8s}
+.parcel-magic{opacity:0;transform-box:fill-box;transform-origin:center;transition:opacity .3s,transform .8s;transform:scale(.3)}
+.story-delivery:not([data-step="idle"]) .scene-truck{transform:translateX(35px)}
+[data-step="arriving"] .truck-wheel{transform-box:fill-box;transform-origin:center;animation:wheel-turn .6s linear infinite}
+[data-step="arriving"] .truck-puff{animation:puff .4s ease-in-out infinite}
+.story-delivery:is([data-step="delivered"],[data-step="pickup"],[data-step="opening"],[data-step="celebrate"]) .scene-parcel{opacity:1}
+.story-delivery:is([data-step="delivered"],[data-step="pickup"],[data-step="opening"],[data-step="celebrate"]) .scene-person{opacity:1}
+.story-delivery:is([data-step="delivered"],[data-step="pickup"],[data-step="opening"],[data-step="celebrate"]) .scene-door{transform:scaleX(.22)}
+.story-delivery:is([data-step="pickup"],[data-step="opening"],[data-step="celebrate"]) .scene-person{transform:translateX(-69px)}
+.story-delivery:is([data-step="opening"],[data-step="celebrate"]) .scene-parcel{transform:translate(-3px,-32px)}
+.story-delivery:is([data-step="opening"],[data-step="celebrate"]) .heli-arm{transform:translate(-3px,-5px)}
+[data-step="celebrate"] .scene-parcel-lid{transform:translateY(-28px) rotate(-23deg)}
+[data-step="celebrate"] .parcel-magic{opacity:1;transform:scale(1.2)}
+.greeting{position:absolute;top:8%;left:0;right:0;margin:0;padding:0 20px;text-align:center;font-size:clamp(35px,5.5vw,86px);font-weight:400;line-height:1.13;letter-spacing:-2px;text-shadow:0 2px 24px #fff5d8,0 1px 3px #fff4d8;animation:greeting-pop .9s cubic-bezier(.18,.8,.25,1.15) both}
+.greeting span{display:block;color:#a95f54;font-style:italic;font-size:1.32em;margin-top:8px}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:2;overflow:hidden}
+.confetti-piece{position:absolute;left:var(--x);bottom:15%;width:var(--size);height:calc(var(--size)*.65);background:var(--color);border-radius:2px;animation:party-burst var(--duration) var(--delay) cubic-bezier(.12,.5,.5,1) forwards;opacity:0}
+@keyframes drift{to{transform:translateX(100px)}}
+@keyframes soar{to{transform:translate(55px,-12px)}}
+@keyframes sway{to{transform:skewX(1.5deg)}}
+@keyframes wheel-turn{to{transform:rotate(360deg)}}
+@keyframes puff{50%{opacity:.3;translate:-4px 0}}
+@keyframes greeting-pop{from{opacity:0;transform:translateY(25px) scale(.8)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes party-burst{0%{opacity:1;transform:translate(0,0) rotate(0)}35%{opacity:1;translate:0 var(--height)}100%{opacity:0;transform:translate(var(--drift),35vh) rotate(var(--rotation));translate:0 0}}
+@media(max-width:600px){.story-delivery{bottom:15vh;width:100vw}.delivery-scene{max-height:55svh}.greeting{top:14%;font-size:clamp(32px,8.5vw,50px);letter-spacing:-1px}.greeting span{margin-top:12px}.scenery{width:100%;height:100%}}
+@media(max-height:500px) and (min-width:601px){.greeting{top:6%;font-size:34px}.greeting span{display:inline;margin-left:10px}.story-delivery{bottom:0}.delivery-scene{max-height:76svh}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.confetti-piece{display:none}}
